@@ -1,0 +1,382 @@
+/* Importación de fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F4EDE8; /* Marfil cálido */
+    color: #3C3C3C; /* Gris humo */
+    line-height: 1.6;
+    font-size: 1rem; /* Base de fuente en rem */
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: #B13A3A; /* Rojo suave */
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-bottom: 5px solid #8B0000; /* Rojo quemado */
+    animation: fadeIn 1s ease-in-out; /* Animación de entrada */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-img {
+    width: 60px;
+    margin-right: 20px;
+}
+
+/* Estilos de navegación */
+nav {
+    background-color: #D85C5C; /* Rojo coral */
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+nav ul li a:hover {
+    background-color: #FF6A6A; /* Rojo suave */
+    color: #8B0000; /* Rojo quemado */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Sombra más suave */
+}
+
+/* Estilos de la cuadrícula del menú */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilos de los elementos del menú */
+.grid-item {
+    background-color: white;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+    transition: transform 0.3s ease;
+}
+
+.grid-item img:hover {
+    transform: scale(1.1); /* Efecto de zoom suave */
+    filter: brightness(80%);
+}
+
+.grid-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    background-color: #FFFAF0; /* Fondo suave al pasar el mouse */
+}
+
+/* Estilos de botones */
+.button {
+    display: block;
+    background-color: #D85C5C; /* Rojo coral */
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.2s ease;
+}
+
+.button:hover {
+    background-color: #FF6A6A; /* Rojo suave */
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos del pie de página */
+footer {
+    background-color: #4B2C2C; /* Marrón vino */
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 40px;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeInFooter 1s ease-in-out forwards; /* Fade-in animado al cargar */
+}
+
+@keyframes fadeInFooter {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Estilos de la sección de descripción */
+.descripcion {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.descripcion:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.descripcion h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #8B0000; /* Rojo quemado */
+    font-size: 2rem;
+}
+
+.descripcion p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+/* Estilos del formulario de contacto */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: #F4EDE8; /* Marfil cálido */
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+input, textarea, button {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #D85C5C; /* Rojo coral */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    padding: 12px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #FF6A6A; /* Rojo suave */
+    transform: scale(1.05);
+}
+
+/* Estilos adicionales para la sección de servicios */
+.servicios-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.servicios-container h2 {
+    font-size: 2.8rem;
+    margin-bottom: 40px;
+    color: #8B0000; /* Rojo quemado */
+}
+
+.servicios-container p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #666; /* Gris suave */
+}
+
+/* Asegurarte de que las imágenes no sobresalgan y mantengan un tamaño uniforme */
+.servicio-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Opcional: Para alinear mejor los elementos */
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px; /* Espacio entre las tarjetas de servicios */
+}
+
+/* Tarjetas de servicios con sombra y transición */
+.servicio-item {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.servicio-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #3C3C3C; /* Gris humo */
+}
+
+.servicio-item p {
+    font-size: 1.1rem;
+    color: #5B5B5B; /* Gris medio */
+}
+
+.servicio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para el texto adicional */
+.extra-info {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.extra-info.show {
+    display: block;
+    opacity: 1;
+}
+
+/* Estilos para los botones de "Saber más" y "Regresar" */
+.button-show-more {
+    color: #D85C5C;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.button-show-more:hover {
+    color: #FF6A6A; /* Rojo suave */
+}
+
+.back-button {
+    display: none;
+    margin-top: 10px;
+    cursor: pointer;
+    color: #8B0000; /* Rojo quemado */
+    font-weight: bold;
+}
+
+.back-button:hover {
+    color: #D85C5C; /* Rojo coral */
+}
+
+/* Ajustes de estilo generales */
+h2, h3 {
+    color: #8B0000; /* Rojo quemado */
+}
+
+/* Estilos para los banners de las secciones de menú */
+.beverages-banner, .salads-banner, .appetizers-banner, .side-dishes-banner, .main-dishes-banner, .desserts-banner {
+    background-color: #D85C5C; /* Rojo coral */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+    margin-bottom: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.beverages-banner:hover, .salads-banner:hover, .appetizers-banner:hover, .side-dishes-banner:hover, .main-dishes-banner:hover, .desserts-banner:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.beverages-banner h2, .salads-banner h2, .appetizers-banner h2, .side-dishes-banner h2, .main-dishes-banner h2, .desserts-banner h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.beverages-banner p, .salads-banner p, .appetizers-banner p, .side-dishes-banner p, .main-dishes-banner p, .desserts-banner p {
+    font-size: 1.2rem;
+}
+
+/* Ajustes para la cuadrícula de menús */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Media Queries para móviles */
+@media (max-width: 768px) {
+    h2, h3 {
+        font-size: 1.8rem; /* Reducir tamaño de los encabezados en móviles */
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+
+    .button, button {
+        font-size: 1rem; /* Ajustar tamaño de los botones */
+        padding: 10px;  /* Reducir el padding */
+    }
+}
